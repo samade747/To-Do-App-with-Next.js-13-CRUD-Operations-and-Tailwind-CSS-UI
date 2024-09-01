@@ -1,0 +1,24 @@
+{
+    "tasks": [
+        {
+            "id": 1,
+            "text": "aws class assignments"
+        },
+        {
+            "id": 2,
+            "text": "finalinzing client project"
+        },
+        {
+            "id": 3,
+            "name": "client project intigration"
+        },
+        {
+            "id": 4,
+            "text": "client project deployment"            
+        },
+        {
+            "id": 5,
+            "text": "client project testing"
+        }
+    ]
+}
