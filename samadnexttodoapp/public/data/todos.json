@@ -10,11 +10,11 @@
         },
         {
             "id": 3,
-            "name": "client project intigration"
+            "text": "client project intigration"  
         },
         {
             "id": 4,
-            "text": "client project deployment"            
+            "text": "samad client project deployment"            
         },
         {
             "id": 5,
