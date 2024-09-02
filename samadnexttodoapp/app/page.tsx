@@ -3,7 +3,8 @@ import AddTask from "./components/AddTask";
 import TodoList from "./components/TodoList";
 
 export default async function Home() {
-  const tasks = await getAllTodos();
+  const tasks = awai 
+  t getAllTodos();
   console.log(tasks)
 
   return (
@@ -12,7 +13,7 @@ export default async function Home() {
       <h1 className="text-2xl font-bold">TO DO APP </h1>
         <AddTask />       
        </div> 
-      <TodoList />    
+      <TodoList tasks={tasks} />    
     </main>
   );
 }
