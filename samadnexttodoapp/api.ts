@@ -1,8 +1,10 @@
 import { ITask } from "@/types/tasks";
 
+const baseUrl = "http://localhost:3000";
+
 export const getAllTodos = async (): Promise<ITask[]> => {
   try {
-    const res = await fetch(`http://localhost:3000/data/todos.json`); // Full URL
+    const res = await fetch(`${baseUrl}/tasks`); 
 
     if (!res.ok) {
       throw new Error(`Error: ${res.status} ${res.statusText}`);
