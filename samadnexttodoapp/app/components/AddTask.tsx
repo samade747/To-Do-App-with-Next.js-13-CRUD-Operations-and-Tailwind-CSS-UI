@@ -1,13 +1,16 @@
+"use client"
+
 import React, { useState } from "react"
 import { AiOutlinePlus } from "react-icons/ai"
 import Modal from "./Modal"
-
+ 
 
 const AddTask = () => {
-  return (
 
-    const [modalOpen, setModalOpen] = useState<boolean>(false);
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
 
+
+  return (  
     <div> 
       <button 
       className="btn btn-primary w-full"
@@ -16,7 +19,15 @@ const AddTask = () => {
        <AiOutlinePlus className="ml-2" size={20} /> 
        </button>
 
-       <Modal modalOpen={modalOpen} />       
+       <Modal modalOpen={modalOpen} setModalOpen={setModalOpen}> 
+        <form>
+
+        <h3>
+
+        </h3>
+
+        </form>
+       </Modal>
     </div>
   )
 }
