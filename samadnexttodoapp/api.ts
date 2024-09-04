@@ -4,7 +4,7 @@ const baseUrl = "http://localhost:3000";
 
 export const getAllTodos = async (): Promise<ITask[]> => {
   try {
-    const res = await fetch(`${baseUrl}/tasks`); 
+    const res = await fetch(`${baseUrl}/tasks`, { cache: "no-store" }); 
 
     if (!res.ok) {
       throw new Error(`Error: ${res.status} ${res.statusText}`);
@@ -22,3 +22,17 @@ export const getAllTodos = async (): Promise<ITask[]> => {
     throw error; // Re-throw or handle appropriately
   }
 };
+
+
+export const addTodo = async (todo: ITask): Promise<ITask> => {
+  const res = await fetch(`${baseUrl}/tasks`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(todo),
+  })
+  const newTodo = await res.json();
+  return newTodo;
+}
+
